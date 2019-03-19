@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CFContactsTopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG7-c2-Z1n">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-sJ-sPa">
+                            <rect key="frame" x="10" y="10" width="14.5" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="AZb-sJ-sPa" secondAttribute="height" multiplier="21:29" id="ZbL-SL-X80"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前所在城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-c4-ax1">
+                            <rect key="frame" x="29.5" y="0.0" width="86" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CB-uZ-B70">
+                            <rect key="frame" x="120.5" y="0.0" width="58" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <state key="normal" title="点击选择">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cityButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vXx-9f-gIS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-2q-T8q">
+                            <rect key="frame" x="292" y="0.0" width="73" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title=" 重新定位" image="position">
+                                <color key="titleColor" red="0.33019584419999998" green="0.70087391139999999" blue="0.4352524579" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="positionButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="zxP-rk-6CQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AZb-sJ-sPa" secondAttribute="bottom" constant="10" id="5Yx-eg-k8I"/>
+                        <constraint firstItem="9CB-uZ-B70" firstAttribute="leading" secondItem="7rN-c4-ax1" secondAttribute="trailing" constant="5" id="IkA-Xa-oe4"/>
+                        <constraint firstItem="zD9-2q-T8q" firstAttribute="top" secondItem="OG7-c2-Z1n" secondAttribute="top" id="M99-ME-dzQ"/>
+                        <constraint firstItem="9CB-uZ-B70" firstAttribute="top" secondItem="OG7-c2-Z1n" secondAttribute="top" id="NLk-wP-MLc"/>
+                        <constraint firstItem="7rN-c4-ax1" firstAttribute="leading" secondItem="AZb-sJ-sPa" secondAttribute="trailing" constant="5" id="QI0-wN-OmM"/>
+                        <constraint firstAttribute="trailing" secondItem="zD9-2q-T8q" secondAttribute="trailing" constant="10" id="cd0-Bn-swf"/>
+                        <constraint firstItem="AZb-sJ-sPa" firstAttribute="top" secondItem="OG7-c2-Z1n" secondAttribute="top" constant="10" id="doZ-m7-gxU"/>
+                        <constraint firstItem="7rN-c4-ax1" firstAttribute="top" secondItem="OG7-c2-Z1n" secondAttribute="top" id="dvi-c4-YM2"/>
+                        <constraint firstItem="AZb-sJ-sPa" firstAttribute="leading" secondItem="OG7-c2-Z1n" secondAttribute="leading" constant="10" id="hWv-ZW-skd"/>
+                        <constraint firstAttribute="bottom" secondItem="zD9-2q-T8q" secondAttribute="bottom" id="ko8-ZQ-Bfk"/>
+                        <constraint firstAttribute="bottom" secondItem="7rN-c4-ax1" secondAttribute="bottom" id="oxw-lO-VAf"/>
+                        <constraint firstAttribute="bottom" secondItem="9CB-uZ-B70" secondAttribute="bottom" id="shf-LN-P5B"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OG7-c2-Z1n" secondAttribute="trailing" id="Gbe-GN-Exi"/>
+                <constraint firstItem="OG7-c2-Z1n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NKE-H9-SwP"/>
+                <constraint firstItem="OG7-c2-Z1n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e3O-tZ-rfv"/>
+                <constraint firstAttribute="bottom" secondItem="OG7-c2-Z1n" secondAttribute="bottom" id="iOk-9A-YBR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cityBtn" destination="9CB-uZ-B70" id="t83-RU-Fml"/>
+                <outlet property="positionBtn" destination="zD9-2q-T8q" id="FHr-AP-SK8"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="address" width="10.5" height="14.5"/>
+        <image name="position" width="12" height="12"/>
+    </resources>
+</document>

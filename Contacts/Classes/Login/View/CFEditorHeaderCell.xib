@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="CFEditorHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-35-96g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EbE-Oi-wHC">
+                                <rect key="frame" x="125.5" y="10" width="69.5" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EbE-Oi-wHC" secondAttribute="height" multiplier="1:1" id="WS2-4y-TAM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="EbE-Oi-wHC" firstAttribute="top" secondItem="TVY-35-96g" secondAttribute="top" constant="10" id="Ihh-bb-4mq"/>
+                            <constraint firstItem="EbE-Oi-wHC" firstAttribute="centerX" secondItem="TVY-35-96g" secondAttribute="centerX" id="ccN-Fy-8df"/>
+                            <constraint firstAttribute="bottom" secondItem="EbE-Oi-wHC" secondAttribute="bottom" constant="10" id="dRk-v7-sGB"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="R7v-Wt-Ffm" appends="YES" id="2Tv-nh-QJh"/>
+                        </connections>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TVY-35-96g" secondAttribute="trailing" id="NsQ-hA-7sI"/>
+                    <constraint firstAttribute="bottom" secondItem="TVY-35-96g" secondAttribute="bottom" id="eSd-Im-BIM"/>
+                    <constraint firstItem="TVY-35-96g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qdl-1D-1rg"/>
+                    <constraint firstItem="TVY-35-96g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rO2-Z6-iBk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="headerView" destination="EbE-Oi-wHC" id="CDb-CY-u7Z"/>
+            </connections>
+            <point key="canvasLocation" x="129.59999999999999" y="154.72263868065968"/>
+        </tableViewCell>
+        <tapGestureRecognizer id="R7v-Wt-Ffm">
+            <connections>
+                <action selector="headerGesture:" destination="KGk-i7-Jjw" id="wHs-iY-0gp"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

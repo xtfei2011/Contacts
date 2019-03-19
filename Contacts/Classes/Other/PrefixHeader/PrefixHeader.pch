@@ -1,0 +1,119 @@
+//
+//  PrefixHeader.pch
+//  Contacts
+//
+//  Created by 谢腾飞 on 2019/3/7.
+//  Copyright © 2019 谢腾飞. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*** 如果希望某些内容能拷贝到任何源代码文件(OC\C\C++等), 那么就不要写在#ifdef __OBJC__和#eCFif之间 ***/
+
+
+/***** 在#ifdef __OBJC__和#eCFif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/
+#ifdef __OBJC__
+
+/*** 拓展引用 ***/
+#import "UIView+TFExtension.h"
+#import "UIBarButtonItem+TFExtension.h"
+#import "UIView+TFNib.h"
+#import "UIImage+TFExtension.h"
+#import "UIImageView+TFExtension.h"
+#import "NSString+TFExtension.h"
+#import "UIViewController+NDExtension.h"
+
+/*** 其他引用 ***/
+#import "TFNavigationBar.h"
+#import "CFNetworkTools.h"
+#import "TFExtension.h"
+#import "CFConst.h"
+#import "TFProgressHUD.h"
+#import "CFRefreshFooter.h"
+#import "CFRefreshHeader.h"
+#import "InterfaceHeader.h"
+#import "CFAccount.h"
+#import "CFAccountTool.h"
+
+/*** 框架引用 ***/
+#import <MJExtension/MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import <MJRefresh/MJRefresh.h>
+#import <UMSocialCore/UMSocialCore.h>
+#import <WXApi.h>
+
+/*** 屏幕大小尺寸 ***/
+#define CFScreeFrame                [UIScreen mainScreen].bounds
+#define CFMainScreen_Size           [UIScreen mainScreen].bounds.size
+#define CFMainScreen_Width          [UIScreen mainScreen].bounds.size.width
+#define CFMainScreen_Height         [UIScreen mainScreen].bounds.size.height
+#define CFSelfScreen_Size           self.view.bounds.size
+
+#define CFStatusBarH                [UIApplication sharedApplication].statusBarFrame.size.height
+#define CFNavigationBarH            (CFStatusBarH + 44.0)
+#define iPhoneX_BOTTOM_HEIGHT       (CFMainScreen_Height >= 812 ? 34 : 0)
+
+
+/*** 字体大小 ***/
+#define CFCommodityTitleFont        [UIFont systemFontOfSize:12]
+#define CFCommentTitleFont          [UIFont systemFontOfSize:14]
+#define CFPromptTitleFont           [UIFont systemFontOfSize:16]
+
+
+#define kLeftWidth                  CFMainScreen_Width *0.3
+
+/*** 根控制器 ***/
+#define CFkeyWindowView             [UIApplication sharedApplication].keyWindow
+
+/*** 本地保存 ***/
+#define CFUSER_DEFAULTS             [NSUserDefaults standardUserDefaults]
+
+
+#define APPSCHEME                   @"Contacts"
+#define CustomerService             @"9fe99258673845629a62070a476c8e88"
+
+/*** 友盟分享 KEY***/
+#define shareNameArray @[@"微信",@"朋友圈" ,@"QQ" ,@"QQ空间"]
+#define shareImageArray @[@"wechat_share",@"companion_share" ,@"tencent_share" ,@"space_share"]
+#define WXAPPID    @"wx4af83dfa1c4ff05a"
+#define WXSecret   @"10800d774e0fe59651d4a5047967b3a2"
+
+
+/*** 咨询 电话 ***/
+#define ServicePhone                @"tel://027-59881994"
+
+/*** 咨询 邮箱 ***/
+#define ServiceEmail                @"mailto://rmzj@malisten.com"
+
+
+
+
+
+/*** 缓存路径 ***/
+#define CFCustomCacheFile   [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"Contacts"]
+
+
+/*** 日志 ***/
+#ifdef DEBUG
+#define CFLog(...) NSLog(__VA_ARGS__)
+#else
+#define CFLog(...)
+#endif
+
+#define CFLogFunc CFLog(@"%s", __func__);
+
+
+/*** 颜色 ***/
+#define CFRGBColor(r, g, b, a)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define CFColor(r, g, b)            CFRGBColor((r), (g), (b), 255)
+#define CFRandomColor               CFColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define CFGrayColor(v)              CFColor((v), (v), (v))
+#define CFCommonBgColor             CFColor(247 ,247 ,248)
+
+#define CFColorFromRGB(v) [UIColor colorWithRed:((float)((v & 0xFF0000) >> 16))/255.0 green:((float)((v & 0xFF00) >> 8))/255.0 blue:((float)(v & 0xFF))/255.0 alpha:1.0]
+
+#endif
+/***** 在#ifdef __OBJC__和#eCFif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/
+
+#endif /* PrefixHeader_pch */
